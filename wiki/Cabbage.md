@@ -1,8 +1,5 @@
 # Sickness Identification Using Hyperspectral Imaging - Cabbage
 
-## Survey Papers on Spectral Signatures of Healthy vs. Diseased Cabbage Plants
-Research studies indicate that diseased cabbage plants exhibit distinct spectral signatures compared to healthy ones. These differences arise due to changes in chlorophyll content, cell structure, and moisture levels.
-
 ### Key Findings from Literature:
 1. **Alternaria (Cabbage)**:
    - Infected cabbage leaves exhibit higher reflectance in the near-infrared (NIR) region due to tissue damage.
