@@ -1,9 +1,25 @@
 # Sickness Identification Using Hyperspectral Imaging - Wheat
 
-### Key Findings from Literature:
-1. **Fusarium (Wheat)**:
-   - Infected wheat crops display lower reflectance in the green (500–570 nm) and higher reflectance in the shortwave infrared (SWIR) region (1000–1700 nm).
-   - Changes in the red edge position (680–750 nm) indicate early-stage infection.
+## Disease Detection in Wheat
+
+### **Fusarium (Wheat)**
+**Fusarium** disease in wheat is detected as follows:
+
+- **Decreased reflectance in the green range (500–570 nm)**: Infected wheat plants show lower reflectance in this range because **Fusarium** causes tissue damage and reduces chlorophyll content.
+- **Shift in the "red edge" (680–750 nm)**: **Fusarium** causes a shift in the red edge, which is one of the first symptoms of the disease. This change results from a decrease in the plant's ability to absorb light in this range.
+- **Increased reflectance in the SWIR range (1000–1700 nm)**: Stress caused by **Fusarium** infection can increase reflectance in the shortwave infrared (SWIR) range, which can appear as lighter patches on hyperspectral images.
+
+On images, symptoms of **Fusarium** will look like:
+- Darker patches in the green range, indicating chlorophyll damage.
+- A shift in the red edge, visible as a change in the 680-750 nm region.
+- Lighter patches in the SWIR range (1000–1700 nm) associated with cellular damage.
+
+### Detecting **Fusarium** in Wheat:
+To detect **Fusarium**, focus on:
+- Decreased reflectance in the green range, which indicates damage to photosynthesizing plant cells.
+- Changes in the red edge, which can be used to detect early signs of the disease.
+- Increased reflectance in the SWIR range, which may indicate plant stress and structural damage caused by the infection.
+
 
 ## Key Wavelengths Indicative of Diseases
 Based on literature review, the most indicative wavelengths for disease detection in wheat are:
