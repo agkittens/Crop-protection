@@ -39,3 +39,8 @@ To improve disease detection accuracy in cabbage, pre-processing techniques are 
 3. **Feature Selection Methods**:
    - Band selection based on disease-sensitive wavelengths.
    - Normalized Difference Vegetation Index (NDVI) for stress detection.
+
+## References
+https://www.sciencedirect.com/science/article/pii/S2589721720300295#bb0040
+https://www.sciencedirect.com/science/article/abs/pii/S0168169910001262
+https://www.sciencedirect.com/science/article/abs/pii/S0168169924003995
