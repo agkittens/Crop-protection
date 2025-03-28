@@ -6,15 +6,15 @@
 **Fusarium** disease in wheat is detected as follows:
 
 - **Decreased reflectance in the green range (500–570 nm)**: Infected wheat plants show lower reflectance in this range because **Fusarium** causes tissue damage and reduces chlorophyll content.
-- **Shift in the "red edge" (680–750 nm)**: **Fusarium** causes a shift in the red edge, which is one of the first symptoms of the disease. This change results from a decrease in the plant's ability to absorb light in this range.
-- **Increased reflectance in the SWIR range (1000–1700 nm)**: Stress caused by **Fusarium** infection can increase reflectance in the shortwave infrared (SWIR) range, which can appear as lighter patches on hyperspectral images.
+- **Shift in the "red edge" (680–750 nm)**: **Fusarium** causes a shift in the red edge, which is one of the first symptoms of the disease. This change results from a decrease in the plant's ability to absorb light in this range. The red edge is the transition region between the red (absorbed by chlorophyll) and the near-infrared (strongly reflected by healthy plant cells). A shift in this region typically indicates physiological stress, such as disease, drought, or nutrient deficiency.
+- **Increased reflectance in the SWIR range (1000–1700 nm)**: Stress caused by Fusarium infection can increase reflectance in the shortwave infrared (SWIR) range, which can appear as lighter patches on hyperspectral images.
 
 ![red edge](img/rededge.PNG)
 
 On images, symptoms of **Fusarium** will look like:
-- Darker patches in the green range, indicating chlorophyll damage.
-- A shift in the red edge, visible as a change in the 680-750 nm region.
-- Lighter patches in the SWIR range (1000–1700 nm) associated with cellular damage.
+- Darker patches in the green range (500–570 nm): These indicate reduced chlorophyll levels and early tissue damage.
+- A shift in the red edge (680–750 nm): Infected areas may show a displacement of the red edge towards shorter wavelengths, signaling physiological stress before visible symptoms appear.
+- Lighter patches in the SWIR range (1000–1700 nm): These correspond to structural damage, loss of water content, and changes in cell composition.
 
 ### Detecting **Fusarium** in Wheat:
 To detect **Fusarium**, focus on:
