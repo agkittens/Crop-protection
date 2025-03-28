@@ -9,7 +9,7 @@
 - **Shift in the "red edge" (680–750 nm)**: **Fusarium** causes a shift in the red edge, which is one of the first symptoms of the disease. This change results from a decrease in the plant's ability to absorb light in this range.
 - **Increased reflectance in the SWIR range (1000–1700 nm)**: Stress caused by **Fusarium** infection can increase reflectance in the shortwave infrared (SWIR) range, which can appear as lighter patches on hyperspectral images.
 
-![red edge](img/rededge.png)
+![red edge](img/rededge.PNG)
 
 On images, symptoms of **Fusarium** will look like:
 - Darker patches in the green range, indicating chlorophyll damage.
