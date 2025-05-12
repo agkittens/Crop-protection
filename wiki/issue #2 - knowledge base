@@ -1,0 +1,52 @@
+# Klasyfikacja Zdjęć z Wykorzystaniem Pytorch i Multi-GPU
+
+## Architektura i Funkcje Aktywacji
+
+W oparciu o analizę literatury naukowej:
+
+- **Źródło**: [IEEEXplore - Paper 9111637](https://ieeexplore-1ieee-1org-1000007t4000f.han.bg.pg.edu.pl/stamp/stamp.jsp?tp=&arnumber=9111637)
+- Stosowana hierarchia funkcji aktywacji:
+  - `DS-Spatial` 
+  - `DS-Channel` 
+  - `ReLU`
+  - `Tanh`
+  - `Sigmoid`
+- Szczegóły w publikacji: [IEEEXplore - Paper 9468782](https://ieeexplore-1ieee-1org-1000007t4000f.han.bg.pg.edu.pl/stamp/stamp.jsp?tp=&arnumber=9468782)
+
+---
+
+## Multi-GPU w Pytorch
+
+Do efektywnego trenowania modeli z wykorzystaniem wielu GPU można użyć:
+
+- [`torch.nn.parallel.DistributedDataParallel`](https://pytorch.org/docs/stable/generated/torch.nn.parallel.DistributedDataParallel.html)
+- Artykuł wyjaśniający użycie multi-node i multi-GPU: [Medium - Ashraf Kasem](https://medium.com/@ashraf.kasem.94.0/scaling-deep-learning-with-pytorch-multi-node-and-multi-gpu-training-explained-with-code-ece8f03ea59b)
+- Praktyczne wskazówki: [SaturnCloud - How to Use Multiple GPUs in Pytorch](https://saturncloud.io/blog/how-to-use-multiple-gpus-in-pytorch/)
+
+**Ważne**:
+- Odpowiedni dobór `batch_size` ma istotny wpływ na skalowanie wydajności.
+  
+---
+
+## Narzędzia Wspierające Pracę Zespołową
+
+- Obecnie trwają rozmowy z Neptune.ai nad udostępnieniem darmowej licencji.  
+
+---
+
+## Zbiór Danych do Testów
+
+- **Indian Pines Dataset**: popularny benchmark do klasyfikacji hiperspektralnej.
+- Źródło: [Papers With Code - Indian Pines](https://paperswithcode.com/dataset/indian-pines)
+
+---
+
+## Szacowanie Obciążenia (Workload Estimations)
+
+- **Platforma**: Linux wypada lepiej od Windows w testach wydajności.
+- **Framework**: PyTorch uchodzi za jeden z najszybszych.
+- **Wydajność treningu (100 epok) dla pracy naukowej, która sprawdziła czas treningu swojego modelu**:
+  - 2× GPU: **6,30 s**
+  - 1× GPU: **11,1 s**
+
+---
