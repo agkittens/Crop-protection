@@ -6,6 +6,8 @@ import torch
 from sklearn.preprocessing import MinMaxScaler
 from torch.utils.data import Dataset, DataLoader, random_split
 
+patch_size = 11
+
 def download_file(url, filename):
     if not os.path.exists(filename):
         print(f"Pobieranie {filename}...")
@@ -36,7 +38,7 @@ def pad_with_zeros(data, margin):
     return np.pad(data, ((margin, margin), (margin, margin), (0, 0)), mode='constant')
 
 class HSI_Dataset(Dataset):
-    def __init__(self, patch_size=5):
+    def __init__(self, patch_size=patch_size):
         data, labels = load_indian_pines()
         data = normalize(data)
         margin = patch_size // 2
@@ -65,7 +67,7 @@ class HSI_Dataset(Dataset):
     def __getitem__(self, idx):
         return torch.tensor(self.patches[idx], dtype=torch.float32), torch.tensor(self.targets[idx], dtype=torch.long)
 
-def get_loaders(batch_size=32, patch_size=5, val_split=0.2):
+def get_loaders(batch_size=32, patch_size=patch_size, val_split=0.2):
     dataset = HSI_Dataset(patch_size)
     val_len = int(len(dataset) * val_split)
     train_len = len(dataset) - val_len

@@ -5,6 +5,12 @@ from model import InceptionHSINet
 from load_data_indian_pines import get_loaders
 from model_2 import SimpleHSINet
 from model_3 import CNNFromDiagram
+from predict_and_visualize import predict_whole_scene, visualize
+
+patch_size = 11
+
+print(torch.cuda.is_available())
+print(torch.cuda.get_device_name(0))
 
 def train(model, train_loader, val_loader, epochs=10, lr=0.001, device="cuda" if torch.cuda.is_available() else "cpu"):
     model = model.to(device)
@@ -40,11 +46,11 @@ def train(model, train_loader, val_loader, epochs=10, lr=0.001, device="cuda" if
         print(f"Validation Accuracy: {val_acc:.2f}%")
 
 if __name__ == "__main__":
-    train_loader, val_loader = get_loaders(batch_size=64, patch_size=5)
+    train_loader, val_loader = get_loaders(batch_size=100, patch_size=patch_size)
 
     #model = from issue #2 conv. network model
     model = InceptionHSINet(in_channels=1, num_classes=16)
-    train(model, train_loader, val_loader, epochs=10)
+    train(model, train_loader, val_loader, epochs=500)
 
     #model_2 = danqu130/Indian_pines_classification on github
     #model_2 = SimpleHSINet(input_channels=30, num_classes=16)
@@ -53,3 +59,6 @@ if __name__ == "__main__":
     #model_3 = KGPML/Hyperspectral on github for CNN model
     #model_3 = CNNFromDiagram(input_channels=200, num_classes=16)
     #train(model_3, train_loader, val_loader, epochs=10)
+
+    pred_map, true_map = predict_whole_scene(model, patch_size=patch_size)
+    visualize(pred_map, true_map)
