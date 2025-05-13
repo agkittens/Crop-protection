@@ -1,5 +1,3 @@
-# data_loader.py
-
 import os
 import urllib.request
 import scipy.io as sio

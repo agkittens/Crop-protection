@@ -1,10 +1,10 @@
-# train.py
-
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from model import InceptionHSINet
 from load_data_indian_pines import get_loaders
+from model_2 import SimpleHSINet
+from model_3 import CNNFromDiagram
 
 def train(model, train_loader, val_loader, epochs=10, lr=0.001, device="cuda" if torch.cuda.is_available() else "cpu"):
     model = model.to(device)
@@ -41,5 +41,15 @@ def train(model, train_loader, val_loader, epochs=10, lr=0.001, device="cuda" if
 
 if __name__ == "__main__":
     train_loader, val_loader = get_loaders(batch_size=64, patch_size=5)
+
+    #model = from issue #2 conv. network model
     model = InceptionHSINet(in_channels=1, num_classes=16)
     train(model, train_loader, val_loader, epochs=10)
+
+    #model_2 = danqu130/Indian_pines_classification on github
+    #model_2 = SimpleHSINet(input_channels=30, num_classes=16)
+    #train(model_2, train_loader, val_loader, epochs=10)
+
+    #model_3 = KGPML/Hyperspectral on github for CNN model
+    #model_3 = CNNFromDiagram(input_channels=200, num_classes=16)
+    #train(model_3, train_loader, val_loader, epochs=10)
