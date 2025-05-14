@@ -1,5 +1,11 @@
-FILE_PATHS = ["data/img_k0000.mat",
-              "data/img_k0001.mat",
-              "data/img_k0002.mat",
-              "data/img_k0003.mat",
-              "data/img_k0004.mat"]
+FILES_PATH = ["Crop-protection/data/img_k0000.mat",
+              "Crop-protection/data/img_k0001.mat",
+              "Crop-protection/data/img_k0002.mat",
+              "Crop-protection/data/img_k0003.mat",
+              "Crop-protection/data/img_k0004.mat",
+              "Crop-protection/data/img_p0000.mat",
+              "Crop-protection/data/img_p0001.mat",
+              "Crop-protection/data/img_p0002.mat",
+              "Crop-protection/data/img_p0003.mat",
+              "Crop-protection/data/img_p0004.mat",
+              ]
